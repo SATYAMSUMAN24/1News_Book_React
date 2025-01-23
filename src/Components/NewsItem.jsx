@@ -1,4 +1,5 @@
 import image from '../assets/news.jpg'
+import PropTypes from 'prop-types';
 const NewsItem = ({title, description, src, url}) => {
   return (
     <div className="card bg-dark text-light mb-3 d-inline-block my-3 mx-3 px-2 py-2" style={{maxWidth:"345px"}}>
@@ -11,5 +12,11 @@ const NewsItem = ({title, description, src, url}) => {
   </div>
   )
 }
+NewsItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  src: PropTypes.string,
+  url: PropTypes.string.isRequired,
+};
 
 export default NewsItem

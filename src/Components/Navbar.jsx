@@ -1,4 +1,6 @@
 
+import PropTypes from 'prop-types';
+
 const Navbar = ({setCategory}) => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
@@ -32,5 +34,9 @@ const Navbar = ({setCategory}) => {
 </nav>
   )
 }
+
+Navbar.propTypes = {
+  setCategory: PropTypes.func.isRequired,
+};
 
 export default Navbar

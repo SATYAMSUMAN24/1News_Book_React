@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 import NewsItem from "./NewsItem";
 
 const NewsBoard = ({ category }) => {
@@ -50,6 +51,9 @@ const NewsBoard = ({ category }) => {
       )}
     </div>
   );
+};
+NewsBoard.propTypes = {
+  category: PropTypes.string.isRequired,
 };
 
 export default NewsBoard;
